@@ -5,9 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")] // GET ...localhost:0000/api/users <- [controller] é um placeholder e ele pega a primeira parte do nome da classe.
-    public class UsersController : ControllerBase
+    public class UsersController : BaseApiController
     {   
         private readonly DataContext _context;
         public UsersController(DataContext context) // Instância do DBContext criado durante a requisição. (Lifetime Session Scoped)
